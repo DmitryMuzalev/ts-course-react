@@ -1,13 +1,59 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  height: 100vh;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+}
+
+.todo-form {
+  display: flex;
+  gap: 10px;
+}
+.todo-form__submit-btn {
+  width: 50px;
+}
+
+.todo-form__field {
+  flex-grow: 1;
+  padding: 5px;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-item__checkbox {
+  cursor: pointer;
+}
+
+.todo-item__title {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.todo-item__remove-btn {
+  color: red;
+  cursor: pointer;
 }
