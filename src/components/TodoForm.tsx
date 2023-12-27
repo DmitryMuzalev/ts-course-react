@@ -1,8 +1,8 @@
 import { ITodoForm } from "../types";
 
-export default function TodoForm({ value, onChange }: ITodoForm) {
+export default function TodoForm({ value, onChange, onClick }: ITodoForm) {
   return (
-    <form className="todo-form">
+    <div className="todo-form">
       <input
         type="text"
         className="todo-form__field"
@@ -10,9 +10,9 @@ export default function TodoForm({ value, onChange }: ITodoForm) {
         onChange={onChange}
         value={value}
       />
-      <button type="submit" className={"todo-form__submit-btn"}>
+      <button type="button" className={"todo-form__btn"} onClick={onClick}>
         add
       </button>
-    </form>
+    </div>
   );
 }
